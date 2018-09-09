@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @charset "UTF-8";
 
+svg path,
+svg rect {
+  fill: black;
+}
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.7.0

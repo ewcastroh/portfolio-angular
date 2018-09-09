@@ -1,3 +1,4 @@
+import { ProductosService } from './services/productos.service';
 import { InfoPaginaService } from './services/info-pagina.service';
 import { Component } from '@angular/core';
 
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor( public infoPaginaService: InfoPaginaService ) { }
+  constructor( public infoPaginaService: InfoPaginaService,
+                public productosService: ProductosService ) { }
 }
