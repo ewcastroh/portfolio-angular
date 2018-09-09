@@ -13,7 +13,6 @@ export class InfoPaginaService {
   equipo: Producto[] = [];
 
   constructor(private http: HttpClient) {
-    console.log('Servicio de infoPagina listo.');
 
     this.cargarInfo();
     this.cargarEquipo();
@@ -24,8 +23,6 @@ export class InfoPaginaService {
     this.http
       .get('assets/data/data-pagina.json')
       .subscribe((resp: InfoPagina) => {
-        console.log(resp);
-        // console.log(resp['email']);
         this.info = resp;
         this.cargada = true;
       });
@@ -34,7 +31,6 @@ export class InfoPaginaService {
   private cargarEquipo() {
     this.http.get('https://html-angular-76e22.firebaseio.com/equipo.json')
       .subscribe((resp: Producto[]) => {
-        // console.log(resp);
         this.equipo = resp;
         this.cargada = true;
       });
